@@ -68,7 +68,6 @@ void parse_csv(std::string filename, std::vector<Course> &courses) { // missing 
   std::string line;
   std::getline(input, line); // skip the first line
   while (std::getline(input, line)) {
-//    std::cerr << "debug: " << line << std::endl;
     auto stringName = split(line, ',');
     Course course;
     course.title = stringName[0];
@@ -156,8 +155,6 @@ int main() {
 //  print_courses(courses);
 
   write_courses_offered(courses);
-//  std::cerr << "==== debug for not offered courses ==== " << std::endl;
-//  print_courses(courses);
   write_courses_not_offered(courses);
 
   return run_autograder();
