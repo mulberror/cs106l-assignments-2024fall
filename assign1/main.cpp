@@ -148,7 +148,6 @@ int main() {
   static_assert(is_valid_course<Course>, "Course struct is not correctly defined!");
 
   std::vector<Course> courses;
-//  std::cerr << "arrived 1" << std::endl;
   parse_csv("courses.csv", courses);
 
   /* Uncomment for debugging... */
